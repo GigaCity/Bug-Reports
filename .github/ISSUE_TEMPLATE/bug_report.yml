@@ -46,7 +46,7 @@ body:
       value: "Ich wollte nur Essen kaufen!"
     validations:
       required: true
-  - type: input
+  - type: textarea
     id: console
     attributes:
       label: Screenshot der Console [F8]
