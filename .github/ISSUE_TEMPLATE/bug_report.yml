@@ -1,5 +1,5 @@
 name: Bug Report
-description: File a bug report
+description: Reporte eine Bug
 title: "[Bug]: "
 labels: ["bug", "triage"]
 assignees:
@@ -8,55 +8,49 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
+        Bitte joine unserem Discord Server für weitere Frage.
+  - type: checkboxes
+    attributes:
+      label: Allgemeine Fehlersuche
+      description: Sie bestätigen, dass Sie zuvor die folgenden Kontrollen durchgeführt haben.
+      options:
+      - label: Ich habe im Issue-tracker nach ähnlichen Problemen gesucht.
+        required: true
+      - label: Ich konnte den Bug auf der letzen Version des Servers Repoduzieren
+        required: true
+      - label: Ich habe diesen Bug auf bevorstehende Fehlerbehebungen überprüft.
+        required: true
   - type: input
     id: contact
     attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
+      label: Kontaktangaben
+      description: Bitte gib dein Discord Tag an damit wir dich bei weiteren Fragen Kontaktieren können.
+      placeholder: ex. .𝓐´𝓙𝓸𝓷®#2012
     validations:
       required: false
   - type: textarea
     id: what-happened
     attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
+      label: Was ist passiert?
+      description: Bitte beschreiben den Bug so gut es geht.
+      placeholder: Erzähle uns was passiert ist!
+      value: "Ich hab einen Bug gefunden!"
     validations:
       required: true
-  - type: dropdown
-    id: version
-    attributes:
-      label: Version
-      description: What version of our software are you running?
-      options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
-    validations:
-      required: true
-  - type: dropdown
-    id: browsers
-    attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
   - type: textarea
-    id: logs
+    id: what-should-happened
     attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
-  - type: checkboxes
-    id: terms
+      label: Was sollte eigentlich passieren?
+      description: Bitte beschreibe was du eigentlich erwartest hast.
+      placeholder: Erzähle uns was passiert ist!
+      value: "Ich wollte nur Essen kaufen!"
+    validations:
+      required: true
+  - type: input
+    id: console
     attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
+      label: Screenshot der Console [F8]
+      description: Bitte mache einen Screennshot deiner Console nach dem Bug. [F8]
+      placeholder: Ziehe deinen Screenshot einfach per Drag and Drop in diese Feld oder Copy-Past einfach den Link.
+    validations:
+      required: true
